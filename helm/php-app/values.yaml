@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: ""
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+mysql:
+  image: mysql:8.0
+  database: employee_db
+  username: appuser
+  password: change-me
+
+persistence:
+  size: 1Gi
